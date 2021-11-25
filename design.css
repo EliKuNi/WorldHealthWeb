@@ -1,4 +1,5 @@
 
+
 body {
     background-color:white;
 }
@@ -6,7 +7,10 @@ body {
 h3 {
   text-align: center;
   text-decoration: bold;
-}
+  text-shadow: 5px 2px 4px cyan;
+  
+  }
+  
 #house {
     float:left;
     height:20px;
@@ -33,14 +37,14 @@ nav .Outer {
     border-bottom:1px rgb(46, 116, 122);
     height:60px;
     line-height:60px;
-    background-color:rgb(46, 116, 122);
+    background-color: rgb(67, 141, 224);
 }
 
 nav .Inner {
     border: 1px rgb(88, 144, 149);
     height:45px;
     position: absolute;
-    background-color:rgb(88, 144, 149);
+    background-color: #81cdfc;
     top: 8px;
     right: 100px;
     bottom: 98px;
@@ -82,20 +86,12 @@ img {
    padding: 0;
 }
 
-w {
-    text-align:center;
-    color:rgb(54, 172, 184);
-/* Numbers change position */
-    padding-left: 100px;
-    font-family:'Arial';
-    font-size: 40px;
-}
-
 input {
-    color: grey;
+    color: blue;
     margin-left: 10%;
     width: 300px;
-    height: 20px;
+    height: 50px;
+    border-radius: 10px;
 }
 
 .learn a {
@@ -125,5 +121,33 @@ nav .share a {
     font-style:normal;
     text-decoration:none;
     color:white;
-    
+}
+
+.fa {
+    color: grey;
+    font-size: 35px;
+    margin: 15px;
+    width: 40px;
+    height: 41.5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: .5s linear;
+    float: right;
+}
+
+.fa:hover {
+    font-size: 40px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.fa-instagram:hover {
+    color: white;
+    background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.fa-github:hover {
+    color: black;
+    background-color: #ffffff;
 }
