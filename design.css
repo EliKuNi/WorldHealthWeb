@@ -51,8 +51,7 @@ nav .Inner {
     bottom: 98px;
     left: 40px;
     color: white;
-    text-align:center;
-    
+    text-align:center;  
 }
 
 i {
@@ -86,6 +85,24 @@ img {
    margin: 0;
    padding: 0;
 }
+
+#myTable { 
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  }​
+
+#myTable th, #myTable td { 
+  text-align: left;
+  padding: 12px;
+  }​
+  
+#myTable tr {
+   border-bottom: 1px solid #ddd;
+   }​
+
+#myTable tr.header, #myTable tr:hover {  background-color: #f1f1f1; }
 
 input {
     color: blue;
