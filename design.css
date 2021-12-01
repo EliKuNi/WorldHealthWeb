@@ -50,7 +50,7 @@ nav .Inner {
     bottom: 98px;
     left: 40px;
     color: white;
-    text-align:center;  
+    text-align: center;  
 }
 
 i {
@@ -94,7 +94,7 @@ img {
 
 #myTable th, #myTable td { 
   text-align: left;
-  padding-right: 20px; 
+  padding-left: 20px; 
   }
   
 #myTable tr {
