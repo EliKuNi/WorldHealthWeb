@@ -45,6 +45,7 @@ nav .Inner {
     height:45px;
     position: absolute;
     background-color: #81cdfc;
+    border-radius: 10px;
     top: 8px;
     right: 100px;
     bottom: 98px;
