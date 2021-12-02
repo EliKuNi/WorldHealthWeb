@@ -1,7 +1,10 @@
 
 
 body {
-    background-color:white;
+   background-color: black;
+
+
+   color: white;
 }
 
 h3 {
@@ -21,12 +24,6 @@ h3 {
     
 }
 
-#dots {
-    float:right;
-    height:50px;
-    width: 90px;
-}
-
 m {
   text-align:right;
   color:white;
@@ -41,7 +38,6 @@ nav .Outer {
     line-height:60px;
     position: relative;
     background-color: rgb(67, 141, 224);
-
 }
 
 nav .Inner {
@@ -69,31 +65,16 @@ i {
     height:20px;
     width:20px;
     padding-top:13px;
-    padding-left:10px;
+    padding-left:15px;
 }
-
-#menu-icon {
-    float:right;
-    width:35px;
-    height:35px;
-}
-
-img {
-    display: block;
-    margin: auto;
-    padding: 0px;  
-    height: 90px;
-    width: 120px;
-}
-
 
 .toggle {
-  display: block;
-  margin-top: 40px;
+
+  margin-top: 15px;
   margin-left: 20px;
-  margin-right: 10px;
   float: right;
   user-select: none;
+  margin-right: 20px;
 }
 
 .toggle--checkbox {
@@ -248,6 +229,7 @@ img {
   left: 25px;
   transform: rotate(70deg);
 }
+
 .LightMod {
     background: #FFF;
     color: #000;
@@ -303,10 +285,6 @@ input {
     display: block;
     margin: auto;
     
-}
-
-.learn a {
-    color:black;
 }
 
 .learn {
