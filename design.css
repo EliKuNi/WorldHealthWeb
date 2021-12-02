@@ -45,7 +45,7 @@ nav .Outer {
 nav .Inner {
     border: 1px rgb(88, 144, 149);
     height:45px;
-    position: absolute;
+    position: relative;
     background-color: #81cdfc;
     border-radius: 10px;
     z-index: 20;
