@@ -1,4 +1,9 @@
 
+function fun() {
+    var dark = document.body;
+        dark.classList.toggle('LightMod');
+}
+
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
