@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Health Tourism Statistics report</title>
+<title>Health Tourism Assessment</title>
 
 <link rel="stylesheet" type="text/css" href="design.css">
 <script src="functions.js"> </script>  
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <nav>
 
-<div class="Outer"> <img id="house" style="float: left;" src=https://www.nicepng.com/png/full/115-1153942_white-home-icon-png-white-home-logo-transparent.png />
+<div class="Outer"> <img id="house"  src=https://www.nicepng.com/png/full/115-1153942_white-home-icon-png-white-home-logo-transparent.png />
     
 <div class="Inner"> <img id="lock" style="float: left;" src=https://cells4life.es/wp-content/uploads/2016/07/icono-candado.png><i contenteditable>website.com</i></div> </div>
 </nav>
@@ -20,8 +20,13 @@
 <path fill="#767676" fill-rule="evenodd" d="M19.647 16c.471 0 .853.448.853 1s-.382 1-.853 1H4.353c-.471 0-.853-.448-.853-1s.382-1 .853-1zm0-5c.471 0 .853.448.853 1s-.382 1-.853 1H4.353c-.471 0-.853-.448-.853-1s.382-1 .853-1zm0-5c.471 0 .853.448.853 1s-.382 1-.853 1H4.353C3.882 8 3.5 7.552 3.5 7s.382-1 .853-1z" data-v-7ad42402=""></path>
 
 <body>
+ <div class="toggle toggle--daynight">
+
+            <input type="checkbox" id="toggle--daynight" class="toggle--checkbox" onclick="fun()">
+            <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label> </div>
+            
 <br /><br /> <br />
- <h3> Health Tourism Statistics report </h3>
+ <h3> Health Tourism Assessment </h3>
 
 <!-- Now you can search by typing anything  -->
 
@@ -29,27 +34,36 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your condition or illness..." title="Type in a name">
  
  <br />
- 
-<table id="myTable"> 
-<tr class="header"> 
-<th>Name</th> 
-<th>N. Cases diagnosed</th>
-<th>Treatment success rates</th>
-<th>N. specialized doctors</th>
-<th>Average treatment costs</th>
-<th>Mortality rate</th>
 
- </tr> 
- <tr> 
-   <td>Flu</td> 
-   <td>Germany</td> 
- </tr> 
- <tr> 
- <td>Heart failure</td> 
-  <td>Sweden</td> 
-  </tr> 
-  <tr> 
-   <td>Hypertension</td> 
+ 
+<table id="myTable" border="1"> 
+<tr class="header"> 
+    <thead>
+        <tr>
+           <th>Name</th>
+           <th>N. Cases diagnosed</th>
+           <th>Treatment success rates</th>
+           <th>N. specialized doctors</th>
+           <th>Average treatment costs</th>
+           <th>Mortality rate</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td colspan="6">
+        <div class="scrollit">
+            <table>
+                <tr>
+            <td>Flu</td>
+           <td>number</td>
+                </tr>
+                <tr>
+       <td>Heart failure</td> 
+  <td>number</td> 
+                </tr>
+                <tr>
+        <td>Hypertension</td> 
    <td>UK</td> 
   </tr>
   <tr> 
@@ -78,11 +92,14 @@
         <td>Australia</td> 
                 </tr>
      <tr> <td>Bronchitis</td> 
-        <td>Japan</td> 
+        <td>Japan </td>
+        </div></td> 
                 </tr>      
-       </table>
+       </table> </div>
+               </td> </tr>
+           </tbody> </table>
 
-<br/><br/>
+<br/>
 <div class="learn"><h4><a href="website.com">About Us</a></h4></div>
 <br />
         <nav>
