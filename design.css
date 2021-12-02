@@ -1,4 +1,5 @@
-
+/* By Elizabeth Kuleshova 
+     Creation date: 2/12/2021 */
 
 body {
    background-color: black;
@@ -7,10 +8,11 @@ body {
    color: white;
 }
 
-h3 {
+#sequence {
   text-align: center;
   text-decoration: bold;
   text-shadow: 5px 2px 4px cyan;
+  font-size: 20px;
   
   }
   
@@ -241,38 +243,39 @@ i {
 }
 
 #myTable { 
-  width: 100%;
+  width: 100px;
   border: 1px solid #ddd;
   font-size: 18px;
   }
 
-#myTable th, #myTable td { 
-  text-align: left;
+
+#myTable td { 
+  text-align: center;
   padding-left: 10px; 
-  padding-right: 50px;
+  padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
-   border: 1px solid #ddd;
+  border: 1px solid #ddd;
   }
   
 #myTable th {
    text-align: center; 
    background-color: #81cdfc;
+   padding-left: 50px; 
+   padding-right: 50px;
 }
 
 #myTable tr {
    border-bottom: 1px solid #ddd;
    }
 
-#myTable tr:hover {
-   background-color: #f1f1f1;
-}
-
 
 tbody div{
-    overflow: scroll;
+    overflow-x: auto;
+    /*overflow-y: auto;*/
     height: 200px;
-    text-align: left;
+    text-align: center;
+    font-size: 15px;
 }
 
 input {
