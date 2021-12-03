@@ -2,13 +2,6 @@
 /* By Elizabeth Kuleshova 
      Creation date: 2/12/2021 */
 
-//toggle
-function fun() {
-    var dark = document.body;
-        dark.classList.toggle('LightMod');
-}
-
-
 var example = ['HTA', 'Health Tourism Assessment'];
 
 textSequence(0);
@@ -26,6 +19,12 @@ else if (example.length == i) { // Loop
 textSequence(1);
 
 }}
+
+//toggle
+function fun() {
+    var dark = document.body;
+        dark.classList.toggle('LightMod');
+}
 
 //search your condition
 function myFunction() {
