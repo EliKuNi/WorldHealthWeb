@@ -1,347 +1,351 @@
 /* By Elizabeth Kuleshova 
      Creation date: 2/12/2021 */
 
-body {
-   background-color: black;
-
-
-   color: white;
-}
-
-#sequence {
-  text-align: center;
-  text-decoration: bold;
-  text-shadow: 5px 2px 4px cyan;
-  font-size: 20px;
-  
-  }
-  
-#house {
-    float:left;
-    height:20px;
-    width:20px;
-    padding-top:20px;
-    padding-left: 5px;
-    margin-left: 5px;
-    
-}
-
-m {
-  text-align:right;
-  color:white;
-  font-size:20px;
-  vertical-align:top;
-}
-
-nav .Outer {
-    border-bottom:1px rgb(46, 116, 122);
-    width: 100%;
-    height:60px;
-    line-height:60px;
-    position: fixed;
-    background-color: rgb(67, 141, 224);
-}
-
-nav .Inner {
-    border: 1px rgb(88, 144, 149);
-    height:45px;
-    position: fixed;
-    background-color: #81cdfc;
-    border-radius: 10px;
-    z-index: 20;
-    top: 8px;
-    right: 100px;
-    bottom: 98px;
-    left: 40px;
-    color: white;
-    text-align: center;  
-}
-
-i {
-    text-align:left;
-    font-style:normal;
-}
-
-#lock {
-    float:left;
-    height:20px;
-    width:20px;
-    padding-top:13px;
-    padding-left:15px;
-}
-
-.toggle {
-
-  margin-top: 15px;
-  margin-left: 20px;
-  float: right;
-  user-select: none;
-  margin-right: 20px;
-}
-
-.toggle--checkbox {
-  display: none;
-}
-
-.toggle--btn {
-  display: block;
-  margin: 0 auto;
-  font-size: 1.4em;
-  transition: all 350ms ease-in;
-}
-
-.toggle--btn:hover {
-  cursor: pointer;
-}
-
-.toggle--btn, .toggle--btn:before, .toggle--btn:after,
-.toggle--checkbox,
-.toggle--checkbox:before,
-.toggle--checkbox:after,
-.toggle--feature,
-.toggle--feature:before,
-.toggle--feature:after {
-  transition: all 250ms ease-in;
-}
-.toggle--btn:before, .toggle--btn:after,
-.toggle--checkbox:before,
-.toggle--checkbox:after,
-.toggle--feature:before,
-.toggle--feature:after {
-  content: "";
-  display: block;
-}
-
-/*button measurements*/
-.toggle--daynight .toggle--btn,
-.toggle--like .toggle--btn {
-  position: relative;
-  height: 25px;
-  width: 50px;
-  border-radius: 70px;
-}
-
-/*moon and sun*/
-.toggle--daynight .toggle--btn:before,
-.toggle--like .toggle--btn:before {
-  position: absolute;
-  bottom: 1px;
-  left: 4px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
-.toggle--daynight .toggle--btn {
-  border: 5px solid #1c1c1c;
-  background-color: #3c4145;
-}
-.toggle--daynight .toggle--btn:before {
-  background-color: #fff;
-  border: 5px solid #e3e3c7;
-}
-
-/*cloud*/
-.toggle--daynight .toggle--btn:after {
-  position: absolute;
-  top: 70%;
-  left: 15px;
-  z-index: 10;
-  width: 5px;
-  height: 5px;
-  opacity: 0;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: #fff 0 0, #fff 3px 0, #fff 6px 0, #fff 9px 0, #fff 11px 0, #fff 14px 0, #fff 16px 0, #fff 21px -1px 0 1px, #fff 16px -7px 0 -2px, #fff 7px -7px 0 1px, #d3d3d3 0 0 0 4px, #d3d3d3 6px 0 0 4px, #d3d3d3 11px 0 0 4px, #d3d3d3 16px 0 0 4px, #d3d3d3 21px -1px 0 5px, #d3d3d3 16px -7px 0 1px, #d3d3d3 7px -7px 0 5px;
-
-  transition: opacity 100ms ease-in;
-}
-
-/*stars*/
-@keyframes starry_star {
-  50% {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: #fff 30px -3px 0 0, #fff 12px 10px 0 -1px, rgba(255, 255, 255, 0.1) 38px 18px 0 1px, #fff 32px 34px 0 0, rgba(255, 255, 255, 0.1) 20px 24px 0 -1.5px, #fff 5px 38px 0 1px;
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 100;
-    transform: scale(1.1);
-  }
-  55% {
-    transform: scale(1.1);
-  }
-  75% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 100;
-    transform: scale(1);
-  }
-}
-
-/*stars animation*/
-.toggle--daynight .toggle--feature {
-  display: block;
-  position: absolute;
-  top: 9px;
-  left: 10.5%;
-  z-index: 20;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 0, rgba(255, 255, 255, 0.1) 12px 10px 0 -1px, #fff 38px 18px 0 1px, rgba(255, 255, 255, 0.1) 32px 34px 0 0, #fff 20px 24px 0 -1.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 1px;
-  animation: starry_star 5s ease-in-out infinite;
-}
-
-/*moon*/
-.toggle--daynight .toggle--checkbox:checked + .toggle--btn {
-  background-color: #9ee3fb;
-  border: 5px solid #86c3d7;
-}
-
-/*sun position*/
-.toggle--daynight .toggle--checkbox:checked + .toggle--btn:before {
-  left: 30px;
-  background-color: #ffdf6d;
-  border: 5px solid #e1c348;
-}
-
-.toggle--daynight .toggle--checkbox:checked + .toggle--btn:after {
-  opacity: 100;
-  animation-name: bounceIn;
-  animation-duration: 0.6s;
-  animation-delay: 0.1s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
-}
-.toggle--daynight .toggle--checkbox:checked + .toggle--btn > .toggle--feature {
-  opacity: 0;
-  box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 -4px, rgba(255, 255, 255, 0.1) 12px 10px 0 -5px, #fff 38px 18px 0 -3px, rgba(255, 255, 255, 0.1) 32px 34px 0 -4px, #fff 20px 24px 0 -5.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 -3px;
-  animation: none;
-}
-.toggle--daynight .toggle--checkbox:checked + .toggle--btn > .toggle--feature:before {
-  left: 25px;
-  transform: rotate(70deg);
-}
-
-.LightMod {
-    background: #FFF;
-    color: #000;
-}
-
-* { 
-   margin: 0;
-   padding: 0;
-}
-
-#myTable { 
-  width: 100px;
-  border: 1px solid #ddd;
-  font-size: 18px;
-  }
-
-
-#myTable td { 
-  text-align: center;
-  padding-left: 50px; 
-  padding-right: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border: 1px solid #ddd;
-  }
-  
-#myTable th {
-   text-align: center; 
-   background-color: #81cdfc;
-   padding-left: 50px; 
-   padding-right: 50px;
-}
-
-#myTable tr {
-   border-bottom: 1px solid #ddd;
-   }
-
-
-tbody div{
-    overflow-x: auto;
-    /*overflow-y: auto;*/
-    height: 200px;
-    text-align: center;
-    font-size: 15px;
-}
-
-input {
-    color: blue;
-    text-align: center;
-    width: 300px;
-    height: 50px;
-    border-radius: 10px;
-    padding-left: 20px;
-    display: block;
-    margin: auto;
-    
-}
-
-.learn {
-    text-align:center;
-    text-decoration:underline;
-}
-
-nav .share {
-    text-decoration:none;
-    display: block;
-    margin: auto;
-    width:150px;
-    border-bottom:1px rgb(67, 141, 224);
-    height:60px;
-    line-height:60px;
-    background-color:rgb(67, 141, 224);
-    text-align:center;
-    font-size:18px;
-    border-radius: 4px;
-}
-
-nav .share a {
-    font-style:normal;
-    text-decoration:none;
-    color:white;
-}
-
-.fa {
-    color: grey;
-    font-size: 35px;
-    margin: 15px;
-    width: 40px;
-    height: 41.5px;
-    transition: .5s linear;
-    float: right;
-}
-
-.fa:hover {
-    font-size: 40px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.fa-instagram:hover {
-    color: white;
-    background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-}
-
-.fa-github:hover {
-    color: black;
-    background-color: #ffffff;
-    padding-right: 20px;
-}
-
-p {
-    margin-left: 20px;
-}
+     body {
+        background-color: black;
+     
+     
+        color: white;
+     }
+     
+     #sequence {
+       text-align: center;
+       text-decoration: bold;
+       text-shadow: 5px 2px 4px cyan;
+       font-size: 20px;
+       animation: type 4s steps(60, end); 
+       }
+       
+     #house {
+         float:left;
+         height:20px;
+         width:20px;
+         padding-top:20px;
+         padding-left: 5px;
+         margin-left: 5px;
+         
+     }
+     
+     m {
+       text-align:right;
+       color:white;
+       font-size:20px;
+       vertical-align:top;
+     }
+     
+     nav .Outer {
+         border-bottom:1px rgb(46, 116, 122);
+         width: 100%;
+         height:60px;
+         line-height:60px;
+         position: fixed;
+         background-color: rgb(67, 141, 224);
+     }
+     
+     nav .Inner {
+         border: 1px rgb(88, 144, 149);
+         height:45px;
+         position: fixed;
+         background-color: #81cdfc;
+         border-radius: 10px;
+         z-index: 20;
+         top: 8px;
+         right: 100px;
+         bottom: 98px;
+         left: 40px;
+         color: white;
+         text-align: center;  
+     }
+     
+     i {
+         text-align:left;
+         font-style:normal;
+     }
+     
+     #lock {
+         float:left;
+         height:20px;
+         width:20px;
+         padding-top:13px;
+         padding-left:15px;
+     }
+     
+     .toggle {
+     
+       margin-top: 15px;
+       margin-left: 20px;
+       float: right;
+       user-select: none;
+       margin-right: 20px;
+     }
+     
+     .toggle--checkbox {
+       display: none;
+     }
+     
+     .toggle--btn {
+       display: block;
+       margin: 0 auto;
+       font-size: 1.4em;
+       transition: all 350ms ease-in;
+     }
+     
+     .toggle--btn:hover {
+       cursor: pointer;
+     }
+     
+     .toggle--btn, .toggle--btn:before, .toggle--btn:after,
+     .toggle--checkbox,
+     .toggle--checkbox:before,
+     .toggle--checkbox:after,
+     .toggle--feature,
+     .toggle--feature:before,
+     .toggle--feature:after {
+       transition: all 250ms ease-in;
+     }
+     .toggle--btn:before, .toggle--btn:after,
+     .toggle--checkbox:before,
+     .toggle--checkbox:after,
+     .toggle--feature:before,
+     .toggle--feature:after {
+       content: "";
+       display: block;
+     }
+     
+     /*button measurements*/
+     .toggle--daynight .toggle--btn,
+     .toggle--like .toggle--btn {
+       position: relative;
+       height: 25px;
+       width: 50px;
+       border-radius: 70px;
+     }
+     
+     /*moon and sun*/
+     .toggle--daynight .toggle--btn:before,
+     .toggle--like .toggle--btn:before {
+       position: absolute;
+       bottom: 1px;
+       left: 4px;
+       width: 20px;
+       height: 20px;
+       border-radius: 50%;
+     }
+     
+     .toggle--daynight .toggle--btn {
+       border: 5px solid #1c1c1c;
+       background-color: #3c4145;
+     }
+     .toggle--daynight .toggle--btn:before {
+       background-color: #fff;
+       border: 5px solid #e3e3c7;
+     }
+     
+     /*cloud*/
+     .toggle--daynight .toggle--btn:after {
+       position: absolute;
+       top: 70%;
+       left: 15px;
+       z-index: 10;
+       width: 5px;
+       height: 5px;
+       opacity: 0;
+       background-color: #fff;
+       border-radius: 50%;
+       box-shadow: #fff 0 0, #fff 3px 0, #fff 6px 0, #fff 9px 0, #fff 11px 0, #fff 14px 0, #fff 16px 0, #fff 21px -1px 0 1px, #fff 16px -7px 0 -2px, #fff 7px -7px 0 1px, #d3d3d3 0 0 0 4px, #d3d3d3 6px 0 0 4px, #d3d3d3 11px 0 0 4px, #d3d3d3 16px 0 0 4px, #d3d3d3 21px -1px 0 5px, #d3d3d3 16px -7px 0 1px, #d3d3d3 7px -7px 0 5px;
+     
+       transition: opacity 100ms ease-in;
+     }
+     
+     /*stars*/
+     @keyframes starry_star {
+       50% {
+         background-color: rgba(255, 255, 255, 0.1);
+         box-shadow: #fff 30px -3px 0 0, #fff 12px 10px 0 -1px, rgba(255, 255, 255, 0.1) 38px 18px 0 1px, #fff 32px 34px 0 0, rgba(255, 255, 255, 0.1) 20px 24px 0 -1.5px, #fff 5px 38px 0 1px;
+       }
+     }
+     
+     @keyframes bounceIn {
+       0% {
+         opacity: 0;
+         transform: scale(0.3);
+       }
+       50% {
+         opacity: 100;
+         transform: scale(1.1);
+       }
+       55% {
+         transform: scale(1.1);
+       }
+       75% {
+         transform: scale(0.9);
+       }
+       100% {
+         opacity: 100;
+         transform: scale(1);
+       }
+     }
+     
+     /*stars animation*/
+     .toggle--daynight .toggle--feature {
+       display: block;
+       position: absolute;
+       top: 9px;
+       left: 10.5%;
+       z-index: 20;
+       width: 4px;
+       height: 4px;
+       border-radius: 50%;
+       background-color: #fff;
+       box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 0, rgba(255, 255, 255, 0.1) 12px 10px 0 -1px, #fff 38px 18px 0 1px, rgba(255, 255, 255, 0.1) 32px 34px 0 0, #fff 20px 24px 0 -1.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 1px;
+       animation: starry_star 5s ease-in-out infinite;
+     }
+     
+     /*moon*/
+     .toggle--daynight .toggle--checkbox:checked + .toggle--btn {
+       background-color: #9ee3fb;
+       border: 5px solid #86c3d7;
+     }
+     
+     /*sun position*/
+     .toggle--daynight .toggle--checkbox:checked + .toggle--btn:before {
+       left: 30px;
+       background-color: #ffdf6d;
+       border: 5px solid #e1c348;
+     }
+     
+     .toggle--daynight .toggle--checkbox:checked + .toggle--btn:after {
+       opacity: 100;
+       animation-name: bounceIn;
+       animation-duration: 0.6s;
+       animation-delay: 0.1s;
+       animation-fill-mode: backwards;
+       animation-timing-function: ease-in-out;
+     }
+     .toggle--daynight .toggle--checkbox:checked + .toggle--btn > .toggle--feature {
+       opacity: 0;
+       box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 -4px, rgba(255, 255, 255, 0.1) 12px 10px 0 -5px, #fff 38px 18px 0 -3px, rgba(255, 255, 255, 0.1) 32px 34px 0 -4px, #fff 20px 24px 0 -5.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 -3px;
+       animation: none;
+     }
+     .toggle--daynight .toggle--checkbox:checked + .toggle--btn > .toggle--feature:before {
+       left: 25px;
+       transform: rotate(70deg);
+     }
+     
+     .LightMod {
+         background: #FFF;
+         color: #000;
+     }
+     
+     * { 
+        margin: 0;
+        padding: 0;
+     }
+     
+     #myTable { 
+       width: 100px;
+       border: 1px solid #ddd;
+       font-size: 18px;
+       margin-left: 150px;
+       }
+     
+     
+     #myTable td { 
+       text-align: center;
+       padding-left: 50px; 
+       padding-right: 30px;
+       padding-top: 5px;
+       padding-bottom: 5px;
+       border: 1px solid #ddd;
+       }
+       
+     #myTable th {
+        text-align: center; 
+        background-color: #81cdfc;
+        padding-left: 50px; 
+        padding-right: 50px;
+     }
+     
+     #myTable tr {
+        border-bottom: 1px solid #ddd;
+        }
+     
+     
+     tbody div{
+         overflow-x: auto;
+         /*overflow-y: auto;*/
+         height: 200px;
+         text-align: center;
+         font-size: 15px;
+     }
+     
+     input {
+         color: blue;
+         text-align: center;
+         width: 300px;
+         height: 50px;
+         border-radius: 10px;
+         padding-left: 20px;
+         display: block;
+         margin: auto;
+         
+     }
+     
+     .learn {
+         text-align:center;
+         text-decoration:underline;
+     }
+     
+     nav .share {
+         text-decoration:none;
+         display: block;
+         margin: auto;
+         width:150px;
+         border-bottom:1px rgb(67, 141, 224);
+         height:60px;
+         line-height:60px;
+         background-color:rgb(67, 141, 224);
+         text-align:center;
+         font-size:18px;
+         border-radius: 4px;
+     }
+     
+     nav .share a {
+         font-style:normal;
+         text-decoration:none;
+         color:white;
+     }
+     
+     .fa {
+         color: grey;
+         font-size: 35px;
+         margin: 15px;
+         width: 40px;
+         height: 41.5px;
+         transition: .5s linear;
+         float: right;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+     }
+     
+     .fa:hover {
+         font-size: 40px;
+         margin: 10px;
+         border-radius: 10px;
+     }
+     
+     .fa-instagram:hover {
+         color: white;
+         background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+     }
+     
+     .fa-github:hover {
+         color: black;
+         background-color: #ffffff;
+     }
+     
+     p {
+         margin-left: 25px;
+         font-family: "Courier";
+     }
