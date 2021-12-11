@@ -1,17 +1,18 @@
+
 <!-- By Elizabeth Kuleshova 
      Creation date: 2/12/2021 -->
      
-     <!DOCTYPE html>
-     <html lang="en">
-     <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Health Tourism Assessment</title>
      
-     <script type="text/javascript" src="functions.js"> </script> 
+     <script type="text/javascript" src="works.js"> </script> 
      <link rel="stylesheet" type="text/css" href="design.css">
- 
-     </head>
+     
+    </head>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
       <nav>
      
@@ -27,14 +28,32 @@
                                
      <br /><br /> 
       <div id="sequence"></div>
-     
+      
+      <nav role="navigation">
+        <div id="menuToggle">
+         
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About us</li></a>
+            <a href="#" target="_blank" ><li>Info</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="#" target="_blank"><li>Show me more</li></a>
+          </ul>
+        </div>
+      </nav>
+
      <!-- Now you can search by typing anything  -->
      
      <br />
-     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your condition or illness..." title="Type in a name">
+     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your condition or illness..."
+     title="Type in a name">
       
       <br />
-     
       
      <table id="myTable" border="1"> 
      <tr class="header"> 
@@ -89,7 +108,7 @@
         <td>Acne</td> <td>+50 million</td> 
         <td>60%</td>
          <td>9.6 million</td>
-          <td>$45–$200 monthly</td>
+          <td>$45-$200 monthly</td>
            <td>-</td>
         </tr> 
         <tr> 
@@ -112,7 +131,7 @@
             <td>50 million</td> <td>50%</td> 
              <td>4 million</td>
              <td>$1,022-$19,749</td>
-             <td>1.6%–9.3%</td>
+             <td>1.6%-9.3%</td>
             </tr>
             <tr> <td>Asthma</td> 
          <td>300 million</td> 
@@ -161,5 +180,5 @@
            </div>
            
       <p>Donate to us!</p>
-     </body>
-     </html>
+  </body>
+</html>
