@@ -368,7 +368,7 @@
 }
 
      #myTable { 
-       width: 100px;
+       width: 10px;
        border: 1px solid grey;
        font-size: 18px;
        margin-left:auto; 
@@ -395,16 +395,33 @@
      #myTable tr {
         border-bottom: 1px solid #ddd;
         }
+        
+    /* phone version */
+  
+  @media screen and (max-width: 600px) { 
+        #myTable th { 
+          display: none; 
+        } 
+        #myTable td { 
+          display: flex; 
+          justify-content: center;
+          
+        } 
+        #myTable td::after { 
+          content: attr(label); 
+          font-weight: bold; 
+          width: 10px;
+        }
+      }
      
-     
-     tbody div{
+   tbody div{
          overflow-x: auto;
          height: 200px;
          text-align: center;
          font-size: 15px;
      }
      
-     input {
+    input {
          color: blue;
          text-align: center;
          width: 300px;
