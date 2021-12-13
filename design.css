@@ -1,6 +1,6 @@
 
 /* By Elizabeth Kuleshova 
-     Creation date: 2/12/2021 */
+     Creation date: 2/10/2021 */
 
      body {
         background-color: black;
@@ -283,9 +283,7 @@
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick burger
- */
+/* Just a quick burger */
 #menuToggle span
 {
   display: block;
@@ -401,7 +399,6 @@
      
      tbody div{
          overflow-x: auto;
-         /*overflow-y: auto;*/
          height: 200px;
          text-align: center;
          font-size: 15px;
@@ -476,4 +473,12 @@
      p {
          margin-left: 25px;
          font-family: "Courier";
+     }
+     
+     h6 {
+      text-align: center;
+      font-family: Courier;
+       display: block;
+       margin: auto;
+       text-shadow: 5px 2px 4px #6AFFE4;
      }
